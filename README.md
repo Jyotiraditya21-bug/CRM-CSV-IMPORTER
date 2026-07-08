@@ -7,7 +7,7 @@ This repository contains the submission for the Software Developer assignment at
 
 
 
-* **Position Applied For**: Software Developer Intern
+* **Position Applied For**: SDE Intern
 
 
 ---
