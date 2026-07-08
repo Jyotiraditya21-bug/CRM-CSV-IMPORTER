@@ -424,13 +424,13 @@ export default function ImporterDashboard() {
   const getStatusBadgeColor = (status: string | null) => {
     switch (status) {
       case "SALE_DONE":
-        return "bg-zinc-800 text-zinc-100 border-zinc-700 font-bold";
+        return "bg-emerald-950/20 text-emerald-400 border-emerald-900/40 font-bold";
       case "GOOD_LEAD_FOLLOW_UP":
-        return "bg-zinc-900 text-zinc-300 border-zinc-800";
+        return "bg-emerald-950/10 text-emerald-500/85 border-emerald-900/20";
       case "DID_NOT_CONNECT":
-        return "bg-zinc-950 text-zinc-400 border-zinc-900";
+        return "bg-amber-950/20 text-amber-400/85 border-amber-900/30";
       case "BAD_LEAD":
-        return "bg-black text-zinc-500 border-zinc-900";
+        return "bg-rose-950/25 text-rose-400 border-rose-900/30";
       default:
         return "bg-zinc-900 text-zinc-500 border-zinc-800";
     }
@@ -440,11 +440,11 @@ export default function ImporterDashboard() {
   const getRelevancyBadgeColor = (relevancy: string) => {
     switch (relevancy) {
       case "HIGH":
-        return "bg-zinc-800 text-zinc-200 border-zinc-700";
+        return "bg-emerald-950/15 text-emerald-400 border-emerald-900/30";
       case "MEDIUM":
-        return "bg-zinc-900 text-zinc-400 border-zinc-800";
+        return "bg-amber-950/15 text-amber-400 border-amber-900/30";
       case "LOW":
-        return "bg-black text-zinc-500 border-zinc-900";
+        return "bg-rose-950/20 text-rose-400 border-rose-900/25";
       default:
         return "bg-zinc-900 text-zinc-500 border-zinc-800";
     }
@@ -462,7 +462,10 @@ export default function ImporterDashboard() {
             <h1 className="text-sm font-bold tracking-tight text-zinc-100">
               groweasy-importer-v1.0
             </h1>
-            <p className="text-[10px] text-zinc-500">STATUS: ONLINE // SECURE_SHELL</p>
+            <p className="text-[10px] text-emerald-500/80 flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              STATUS: ONLINE // SECURE_SHELL
+            </p>
           </div>
         </div>
 
@@ -642,21 +645,21 @@ export default function ImporterDashboard() {
                           <p className="text-xs font-semibold text-zinc-300">Isolate Primary Contacts (Rule 5)</p>
                           <p className="text-[10px] text-zinc-500">Auto-splits multiple phone numbers & emails, moving secondary ones to crm_notes.</p>
                         </div>
-                        <span className="h-5 w-9 rounded bg-zinc-850 text-zinc-300 border border-zinc-700 flex items-center justify-center text-[10px] font-bold">ON</span>
+                        <span className="h-5 w-9 rounded bg-emerald-950/20 text-emerald-400 border border-emerald-900/40 flex items-center justify-center text-[10px] font-bold">ON</span>
                       </div>
                       <div className="flex items-center justify-between border-t border-zinc-900 pt-4">
                         <div>
                           <p className="text-xs font-semibold text-zinc-300">Auto-format Date Timestamps (Rule 3)</p>
                           <p className="text-[10px] text-zinc-500">Normalizes messy dates to standard JS Date format.</p>
                         </div>
-                        <span className="h-5 w-9 rounded bg-zinc-850 text-zinc-300 border border-zinc-700 flex items-center justify-center text-[10px] font-bold">ON</span>
+                        <span className="h-5 w-9 rounded bg-emerald-950/20 text-emerald-400 border border-emerald-900/40 flex items-center justify-center text-[10px] font-bold">ON</span>
                       </div>
                       <div className="flex items-center justify-between border-t border-zinc-900 pt-4">
                         <div>
                           <p className="text-xs font-semibold text-zinc-300">Predictive Quality Scoring (Relevancy)</p>
                           <p className="text-[10px] text-zinc-550">Calculates lead relevancy rating (HIGH/MEDIUM/LOW) using AI analysis.</p>
                         </div>
-                        <span className="h-5 w-9 rounded bg-zinc-850 text-zinc-300 border border-zinc-700 flex items-center justify-center text-[10px] font-bold">ON</span>
+                        <span className="h-5 w-9 rounded bg-emerald-950/20 text-emerald-400 border border-emerald-900/40 flex items-center justify-center text-[10px] font-bold">ON</span>
                       </div>
                     </div>
                   </div>
@@ -670,21 +673,21 @@ export default function ImporterDashboard() {
                           <p className="font-semibold text-zinc-300">groweasy_sample_leads.csv</p>
                           <p className="text-[9px] text-zinc-500">Today, 5:45 PM • 200 records • CRM Leads</p>
                         </div>
-                        <span className="rounded bg-zinc-850 text-zinc-300 px-2 py-0.5 text-[10px] font-semibold border border-zinc-700">Success (2.5s)</span>
+                        <span className="rounded bg-emerald-950/20 text-emerald-400 px-2 py-0.5 text-[10px] font-semibold border border-emerald-900/30">Success (2.5s)</span>
                       </div>
                       <div className="flex items-center justify-between border-t border-zinc-900 pt-3 text-xs">
                         <div>
                           <p className="font-semibold text-zinc-300">mock_inventory.csv</p>
                           <p className="text-[9px] text-zinc-500">Today, 5:50 PM • 3 records • Product Inventory</p>
                         </div>
-                        <span className="rounded bg-zinc-900 text-zinc-400 px-2 py-0.5 text-[10px] font-semibold border border-zinc-800">Analyzed (2.1s)</span>
+                        <span className="rounded bg-sky-950/20 text-sky-400 px-2 py-0.5 text-[10px] font-semibold border border-sky-900/30">Analyzed (2.1s)</span>
                       </div>
                       <div className="flex items-center justify-between border-t border-zinc-900 pt-3 text-xs">
                         <div>
                           <p className="font-semibold text-zinc-300">facebook_raw_leads_june.csv</p>
                           <p className="text-[9px] text-zinc-500">Yesterday, 1:22 PM • 42 records • CRM Leads</p>
                         </div>
-                        <span className="rounded bg-zinc-850 text-zinc-300 px-2 py-0.5 text-[10px] font-semibold border border-zinc-700">Success (1.8s)</span>
+                        <span className="rounded bg-emerald-950/20 text-emerald-400 px-2 py-0.5 text-[10px] font-semibold border border-emerald-900/30">Success (1.8s)</span>
                       </div>
                     </div>
                   </div>
@@ -999,12 +1002,16 @@ export default function ImporterDashboard() {
                       <span className="text-xs text-zinc-500">Total Raw Rows</span>
                       <span className="mt-1 text-2xl font-bold text-zinc-300">{rawRows.length}</span>
                     </div>
-                    <div className="flex flex-col justify-center rounded border p-4 text-center border-zinc-850 bg-zinc-900 text-zinc-300">
-                      <span className="text-xs text-zinc-400">{datasetType === "crm_leads" ? "Successfully Mapped" : "Imported Records"}</span>
+                    <div className="flex flex-col justify-center rounded border p-4 text-center border-emerald-900/30 bg-emerald-950/5 text-emerald-400">
+                      <span className="text-xs font-medium">{datasetType === "crm_leads" ? "Successfully Mapped" : "Imported Records"}</span>
                       <span className="mt-1 text-2xl font-bold">{metrics.total_imported}</span>
                     </div>
-                    <div className="flex flex-col justify-center rounded border p-4 text-center border-zinc-900 bg-black text-zinc-500">
-                      <span className="text-xs text-zinc-600">{datasetType === "crm_leads" ? "Skipped Records" : "Detected Columns"}</span>
+                    <div className={`flex flex-col justify-center rounded border p-4 text-center ${
+                      datasetType === "crm_leads" && metrics.total_skipped > 0 
+                        ? "border-rose-900/30 bg-rose-950/5 text-rose-400" 
+                        : "border-zinc-900 bg-black text-zinc-500"
+                    }`}>
+                      <span className="text-xs font-medium">{datasetType === "crm_leads" ? "Skipped Records" : "Detected Columns"}</span>
                       <span className="mt-1 text-2xl font-bold">{datasetType === "crm_leads" ? metrics.total_skipped : rawHeaders.length}</span>
                     </div>
                     <div className="flex items-center justify-center p-2">
@@ -1139,8 +1146,8 @@ export default function ImporterDashboard() {
                                       <div className="w-full bg-zinc-900 rounded-full h-1 overflow-hidden border border-zinc-800">
                                         <div
                                           className={`h-full rounded-full transition-all duration-300 ${
-                                            mapped.deal_probability >= 75 ? 'bg-zinc-400' :
-                                            mapped.deal_probability >= 30 ? 'bg-zinc-600' : 'bg-zinc-800'
+                                            mapped.deal_probability >= 75 ? 'bg-emerald-550' :
+                                            mapped.deal_probability >= 30 ? 'bg-amber-500' : 'bg-rose-500'
                                           }`}
                                           style={{ width: `${mapped.deal_probability}%` }}
                                         />
@@ -1343,8 +1350,8 @@ export default function ImporterDashboard() {
                   <div className="mt-1 w-full bg-zinc-900 rounded-full h-1.5 overflow-hidden border border-zinc-800">
                     <div
                       className={`h-full rounded-full transition-all duration-300 ${
-                        selectedLead.deal_probability >= 75 ? 'bg-zinc-400' :
-                        selectedLead.deal_probability >= 30 ? 'bg-zinc-600' : 'bg-zinc-800'
+                        selectedLead.deal_probability >= 75 ? 'bg-emerald-550' :
+                        selectedLead.deal_probability >= 30 ? 'bg-amber-500' : 'bg-rose-500'
                       }`}
                       style={{ width: `${selectedLead.deal_probability}%` }}
                     />
