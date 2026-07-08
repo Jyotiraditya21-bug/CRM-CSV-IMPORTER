@@ -31,6 +31,76 @@ This repository contains the submission for the Software Developer assignment at
 
 ---
 
+## Setup Instructions
+
+### Prerequisites
+* [Node.js](https://nodejs.org/) (v18+)
+* [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+* An [OpenAI API Key](https://platform.openai.com/)
+
+---
+
+### Local Setup (Using npm/yarn)
+
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/Jyotiraditya21-bug/CRM-CSV-IMPORTER.git
+cd CRM-CSV-IMPORTER
+```
+
+#### 2. Configure Environment Variables
+* **Backend**: Create a `.env` file in the `backend/` directory:
+  ```env
+  PORT=5001
+  OPENAI_API_KEY=your_actual_openai_key_here
+  ```
+* **Frontend**: Create a `.env.local` file in the `frontend/` directory:
+  ```env
+  NEXT_PUBLIC_API_URL=http://localhost:5001
+  ```
+  *(Note: If you run the frontend locally and hit the Vercel-hosted backend, set `NEXT_PUBLIC_API_URL=https://crm-csv-importer-phi.vercel.app` or your production backend URL).*
+
+#### 3. Run the Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
+The backend server will run on `http://localhost:5001`.
+
+#### 4. Run the Frontend
+In a new terminal window:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+The Next.js app will run on `http://localhost:3000`.
+
+---
+
+### Docker Setup (Docker Compose)
+A `docker-compose.yml` is provided to run both backend and frontend services together.
+
+1. Create the environment files (`backend/.env` and `frontend/.env.local`) as described above.
+2. In the project root, run:
+   ```bash
+   docker-compose up --build
+   ```
+3. The frontend is accessible at `http://localhost:3000` and the backend at `http://localhost:5001`.
+
+---
+
+### Vercel Deployment Settings (Monorepo)
+To host this Next.js app in a monorepo setup on Vercel:
+1. In the **Vercel Project Dashboard**, go to **Project Settings**.
+2. Set **Root Directory** to `frontend`.
+3. Set **Framework Preset** to `Next.js`.
+4. Add `NEXT_PUBLIC_API_URL` under **Environment Variables** (pointing to your live backend server).
+5. Click **Save** and trigger a **Redeploy**.
+
+---
+
 ## Testing
 
 The project includes unit tests verifying the data mapping, date formatting, and contact splitting logic. The test suite uses Node's native test runner to ensure fast, dependency-free execution.
