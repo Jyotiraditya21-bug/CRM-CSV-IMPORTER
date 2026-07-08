@@ -175,7 +175,7 @@ export default function ImporterDashboard() {
       setProgressMessage(`Sending ${totalRows} records to AI classification engine...`);
       setProgressPercent(40);
 
-      const response = await fetch(`${backendUrl}/api/import`, {
+      const response = await fetch("/api/import", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
