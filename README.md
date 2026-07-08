@@ -4,11 +4,9 @@ This repository contains the submission for the Software Developer assignment at
 
 ---
 
-
-
-
 * **Position Applied For**: SDE Intern
-
+* **Hosted Application URL**: https://crm-csv-importer-phi.vercel.app
+* **GitHub Repository URL**: https://github.com/Jyotiraditya21-bug/CRM-CSV-IMPORTER
 
 ---
 
@@ -33,60 +31,9 @@ This repository contains the submission for the Software Developer assignment at
 
 ---
 
-## Getting Started
-
-### Local Setup
-
-#### 1. Backend Service
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure environment variables by copying `.env.example` to `.env` and inserting your OpenAI API Key:
-   ```env
-   PORT=5001
-   OPENAI_API_KEY=your_openai_api_key
-   ```
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-   The backend API runs on http://localhost:5001.
-
-#### 2. Frontend Service
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the Next.js development server:
-   ```bash
-   npm run dev
-   ```
-   The frontend runs on http://localhost:3000.
-
----
-
-### Docker Compose Setup
-
-To launch both services containerized in a single step, run:
-```bash
-OPENAI_API_KEY="your-openai-key-here" docker-compose up --build
-```
-Access the application at http://localhost:3000.
-
----
-
 ## Testing
 
-The backend includes unit tests verifying the data mapping, date formatting, and contact splitting logic. The test suite uses Node's native test runner to ensure fast, dependency-free execution.
+The project includes unit tests verifying the data mapping, date formatting, and contact splitting logic. The test suite uses Node's native test runner to ensure fast, dependency-free execution.
 
 To run the unit tests:
 1. Navigate to the backend directory:
