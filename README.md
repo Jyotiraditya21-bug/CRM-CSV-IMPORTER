@@ -4,9 +4,9 @@ This repository contains the submission for the Software Developer assignment at
 
 ---
 
-## Submission Details
 
-* **Applicant GitHub**: https://github.com/Jyotiraditya21-bug
+
+
 * **Position Applied For**: Software Developer Intern
 
 
