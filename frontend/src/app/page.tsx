@@ -467,10 +467,10 @@ export default function ImporterDashboard() {
       {/* CSV IMPORTER MODAL */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm">
-          <div className={`relative flex h-full max-h-[85vh] w-full max-w-6xl flex-col rounded-2xl border shadow-2xl transition-colors overflow-hidden ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+          <div className="relative flex h-full max-h-[85vh] w-full max-w-6xl flex-col rounded-lg border shadow-2xl transition-colors overflow-hidden border-zinc-900 bg-black">
             
             {/* Modal Header */}
-            <div className="flex items-center justify-between border-b border-zinc-800/80 px-6 py-4">
+            <div className="flex items-center justify-between border-b border-zinc-900 px-6 py-4">
               <div className="flex items-center gap-2">
                 <FileSpreadsheet className="text-cyan-400" size={20} />
                 <h3 className="text-lg font-bold">Import Leads via CSV</h3>
@@ -499,7 +499,7 @@ export default function ImporterDashboard() {
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}
                     onClick={() => fileInputRef.current?.click()}
-                    className={`flex w-full max-w-xl cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed p-10 text-center transition-all ${darkMode ? "border-zinc-800 bg-zinc-900/50 hover:bg-zinc-900 hover:border-cyan-500/45" : "border-zinc-200 bg-zinc-50 hover:bg-zinc-100 hover:border-cyan-500/45"}`}
+                    className="flex w-full max-w-xl cursor-pointer flex-col items-center justify-center rounded border border-dashed p-10 text-center transition-all border-zinc-800 bg-zinc-950/20 hover:border-emerald-500/30"
                   >
                     <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-400 mb-4">
                       <Upload size={28} />
