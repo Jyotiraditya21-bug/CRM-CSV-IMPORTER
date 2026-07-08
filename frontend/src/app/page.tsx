@@ -719,7 +719,14 @@ export default function ImporterDashboard() {
                               {mappedResults.map((mapped, idx) => (
                                 <tr key={idx} className="hover:bg-zinc-900/50">
                                   <td className="p-3 whitespace-nowrap text-zinc-500">
-                                    {new Date(mapped.created_at).toLocaleDateString() || mapped.created_at}
+                                    {(() => {
+                                      try {
+                                        const d = new Date(mapped.created_at);
+                                        return isNaN(d.getTime()) ? mapped.created_at : `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+                                      } catch {
+                                        return mapped.created_at;
+                                      }
+                                    })()}
                                   </td>
                                   <td className="p-3 font-semibold text-zinc-300 whitespace-nowrap">{mapped.name || <span className="text-zinc-600">-</span>}</td>
                                   <td className="p-3 text-zinc-300 underline underline-offset-2 decoration-zinc-800 whitespace-nowrap">{mapped.email || <span className="text-zinc-600">-</span>}</td>
