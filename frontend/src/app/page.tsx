@@ -54,7 +54,7 @@ interface SkippedRecord {
 }
 
 export default function ImporterDashboard() {
-  const [darkMode, setDarkMode] = useState(true);
+  const darkMode = true;
   const [showModal, setShowModal] = useState(false);
   const [step, setStep] = useState(1); // 1: Upload, 2: Preview, 3: Importing/AI mapping, 4: Results
   
@@ -242,12 +242,11 @@ export default function ImporterDashboard() {
   };
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? "bg-[#0b0c10] text-zinc-100" : "bg-zinc-50 text-zinc-900"}`}>
-      
+    <div className="min-h-screen font-sans bg-[#0b0c10] text-zinc-100">
       {/* Top Banner Navigation */}
-      <header className={`flex items-center justify-between border-b px-8 py-4 transition-colors ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+      <header className="flex items-center justify-between border-b px-8 py-4 border-zinc-800 bg-[#0f111a]">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 text-white font-bold text-lg shadow-lg shadow-cyan-500/10">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 text-zinc-950 font-bold text-lg shadow-lg shadow-cyan-500/10">
             GE
           </div>
           <div>
@@ -259,13 +258,7 @@ export default function ImporterDashboard() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className={`flex h-10 w-10 items-center justify-center rounded-lg border transition-colors ${darkMode ? "border-zinc-800 bg-zinc-900 text-amber-400 hover:bg-zinc-800" : "border-zinc-200 bg-zinc-100 text-zinc-600 hover:bg-zinc-200"}`}
-          >
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-          <div className="flex items-center gap-2 border-l border-zinc-800 pl-4">
+          <div className="flex items-center gap-2 pl-4">
             <div className="h-8 w-8 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-semibold text-cyan-400">
               VK
             </div>
@@ -300,7 +293,7 @@ export default function ImporterDashboard() {
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Control Center</p>
               <nav className="mt-3 space-y-1">
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "bg-zinc-900 text-white font-semibold" : "bg-zinc-100 text-zinc-900 font-semibold"}`}>
+                <a href="#" className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold bg-zinc-900 text-zinc-100">
                   <FolderOpen size={18} className="text-cyan-400" /> Lead Sources
                 </a>
                 <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
@@ -326,14 +319,14 @@ export default function ImporterDashboard() {
             </div>
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-2.5 text-sm font-semibold text-white transition-all shadow-md shadow-cyan-500/20 hover:opacity-95"
+              className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-2.5 text-sm font-semibold text-zinc-950 transition-all shadow-md shadow-cyan-500/20 hover:opacity-95"
             >
               <Upload size={16} /> Import Leads via CSV
             </button>
           </div>
 
           {/* Admin KPI Stats */}
-          <div className="mt-6 grid gap-4 grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-3">
             <div className={`rounded-xl border p-4 transition-colors ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
               <p className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Avg. AI Latency</p>
               <h3 className="mt-1 text-xl font-extrabold text-cyan-400">2.51s</h3>
@@ -344,26 +337,19 @@ export default function ImporterDashboard() {
               <h3 className="mt-1 text-xl font-extrabold text-emerald-400">99.4%</h3>
               <p className="text-[10px] text-zinc-450 mt-1">Based on recent 12 imports</p>
             </div>
-            <div className={`rounded-xl border p-4 transition-colors ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
-              <p className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Total Monthly Quota</p>
-              <h3 className="mt-1 text-xl font-extrabold text-zinc-300">24,510 / 50k</h3>
-              <div className="w-full bg-zinc-800 rounded-full h-1 overflow-hidden mt-2 border border-zinc-700/20">
-                <div className="bg-gradient-to-r from-cyan-500 to-emerald-400 h-full" style={{ width: "49%" }} />
-              </div>
-            </div>
-            <div className={`rounded-xl border p-4 transition-colors ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+            <div className="rounded-xl border p-4 border-zinc-800 bg-[#0f111a]">
               <p className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">AI Cleaning Rules</p>
-              <h3 className="mt-1 text-xl font-extrabold text-violet-450">4 Active</h3>
-              <p className="text-[10px] text-zinc-455 mt-1">Format, Split, Skip, Score</p>
+              <h3 className="mt-1 text-xl font-extrabold text-cyan-400">4 Active</h3>
+              <p className="text-[10px] text-cyan-400 mt-1">Format, Split, Skip, Score</p>
             </div>
           </div>
 
           {/* Connected Lead Channels */}
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Google Ads */}
-            <div className={`rounded-xl border p-6 transition-all ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+            <div className="rounded-xl border p-6 border-zinc-800 bg-[#0f111a]">
               <div className="flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10 text-blue-400">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
                   <TrendingUp size={24} />
                 </div>
                 <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">Active</span>
@@ -395,9 +381,9 @@ export default function ImporterDashboard() {
             </div>
 
             {/* AI CSV Importer Channel */}
-            <div className={`group rounded-xl border p-6 transition-all cursor-pointer ${darkMode ? "border-zinc-800 bg-[#0f111a] hover:border-cyan-500/50" : "border-zinc-200 bg-white hover:border-cyan-500/50"}`} onClick={() => setShowModal(true)}>
+            <div className="group rounded-xl border p-6 border-zinc-800 bg-[#0f111a] hover:border-cyan-500/50 cursor-pointer" onClick={() => setShowModal(true)}>
               <div className="flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-500 to-emerald-400 text-white shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-500 to-emerald-400 text-zinc-950 shadow-md">
                   <FileSpreadsheet size={24} />
                 </div>
                 <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-2 py-0.5 text-xs text-cyan-400">AI Powered</span>
@@ -538,13 +524,13 @@ export default function ImporterDashboard() {
                   <div className="mt-8 flex flex-col sm:flex-row gap-4">
                     <button
                       onClick={downloadSampleTemplate}
-                      className={`flex items-center gap-2 rounded-lg border px-4 py-2 text-xs font-semibold transition-colors ${darkMode ? "border-zinc-800 bg-zinc-900 text-zinc-300 hover:bg-zinc-800" : "border-zinc-200 bg-zinc-100 text-zinc-700 hover:bg-zinc-200"}`}
+                      className="flex items-center gap-2 rounded-lg border px-4 py-2 text-xs font-semibold border-zinc-800 bg-zinc-900 text-zinc-300 hover:bg-zinc-800"
                     >
                       <Download size={14} /> Download Sample CSV Template
                     </button>
                     <button
                       onClick={() => setShowModal(false)}
-                      className={`rounded-lg px-4 py-2 text-xs font-semibold transition-colors ${darkMode ? "bg-zinc-900 text-zinc-400 hover:text-white" : "bg-zinc-200 text-zinc-600 hover:text-zinc-900"}`}
+                      className="rounded-lg px-4 py-2 text-xs font-semibold bg-zinc-900 text-zinc-400 hover:text-zinc-200"
                     >
                       Cancel
                     </button>
@@ -569,7 +555,7 @@ export default function ImporterDashboard() {
                       </button>
                       <button
                         onClick={confirmImport}
-                        className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-1.5 text-xs font-semibold text-white hover:opacity-95 shadow-md shadow-cyan-500/10"
+                        className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-1.5 text-xs font-semibold text-zinc-950 hover:opacity-95 shadow-md shadow-cyan-500/10"
                       >
                         Confirm Import <ChevronRight size={14} />
                       </button>
@@ -653,7 +639,7 @@ export default function ImporterDashboard() {
                     <div className="flex items-center justify-center p-2">
                       <button
                         onClick={resetImporter}
-                        className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-2.5 text-xs font-semibold text-white hover:opacity-95 shadow-md shadow-cyan-500/10"
+                        className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-2.5 text-xs font-semibold text-zinc-950 hover:opacity-95 shadow-md shadow-cyan-500/10"
                       >
                         Import Another File
                       </button>
