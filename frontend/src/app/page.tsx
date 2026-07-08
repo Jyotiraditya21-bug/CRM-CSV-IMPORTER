@@ -242,18 +242,18 @@ export default function ImporterDashboard() {
   };
 
   return (
-    <div className="min-h-screen font-sans bg-[#0b0c10] text-zinc-100">
+    <div className="min-h-screen font-mono bg-black text-zinc-300 selection:bg-emerald-950 selection:text-emerald-300">
       {/* Top Banner Navigation */}
-      <header className="flex items-center justify-between border-b px-8 py-4 border-zinc-800 bg-[#0f111a]">
+      <header className="flex items-center justify-between border-b px-8 py-4 border-zinc-900 bg-black">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 text-zinc-950 font-bold text-lg shadow-lg shadow-cyan-500/10">
-            GE
+          <div className="flex h-9 w-9 items-center justify-center rounded border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 font-bold text-sm">
+            &gt;_
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-              GrowEasy CRM
+            <h1 className="text-sm font-bold tracking-tight text-zinc-100">
+              groweasy-importer-v1.0
             </h1>
-            <p className="text-xs text-zinc-400">Leads Optimization Engine</p>
+            <p className="text-[10px] text-emerald-500/70">STATUS: ONLINE // SECURE_SHELL</p>
           </div>
         </div>
 
@@ -273,36 +273,36 @@ export default function ImporterDashboard() {
       {/* Main Dashboard Layout */}
       <div className="flex">
         {/* Sidebar */}
-        <aside className={`hidden min-h-[calc(screen-65px)] w-64 flex-col border-r p-6 transition-colors md:flex ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+        <aside className="hidden min-h-[calc(screen-65px)] w-64 flex-col border-r p-6 border-zinc-900 bg-black md:flex">
           <div className="space-y-6">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Main Menu</p>
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-600">Main Menu</p>
               <nav className="mt-3 space-y-1">
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-medium text-zinc-500 hover:bg-emerald-950/20 hover:text-emerald-400 transition-colors">
                   <LayoutDashboard size={18} /> Dashboard
                 </a>
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-medium text-zinc-500 hover:bg-emerald-950/20 hover:text-emerald-400 transition-colors">
                   <Zap size={18} /> Generate Leads
                 </a>
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-medium text-zinc-500 hover:bg-emerald-950/20 hover:text-emerald-400 transition-colors">
                   <Users size={18} /> Manage Leads
                 </a>
               </nav>
             </div>
 
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Control Center</p>
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-zinc-600">Control Center</p>
               <nav className="mt-3 space-y-1">
-                <a href="#" className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold bg-zinc-900 text-zinc-100">
-                  <FolderOpen size={18} className="text-cyan-400" /> Lead Sources
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-bold bg-emerald-950/20 text-emerald-400 border border-emerald-500/20">
+                  <FolderOpen size={18} className="text-emerald-400" /> Lead Sources
                 </a>
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-medium text-zinc-500 hover:bg-emerald-950/20 hover:text-emerald-400 transition-colors">
                   <PhoneCall size={18} /> Tele Calling
                 </a>
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-medium text-zinc-500 hover:bg-emerald-950/20 hover:text-emerald-400 transition-colors">
                   <Sliders size={18} /> CRM Fields
                 </a>
-                <a href="#" className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${darkMode ? "text-zinc-400 hover:bg-zinc-900 hover:text-white" : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"}`}>
+                <a href="#" className="flex items-center gap-3 rounded px-3 py-2 text-sm font-medium text-zinc-500 hover:bg-emerald-950/20 hover:text-emerald-400 transition-colors">
                   <Settings size={18} /> Settings
                 </a>
               </nav>
@@ -319,7 +319,7 @@ export default function ImporterDashboard() {
             </div>
             <button
               onClick={() => setShowModal(true)}
-              className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-400 px-4 py-2.5 text-sm font-semibold text-zinc-950 transition-all shadow-md shadow-cyan-500/20 hover:opacity-95"
+              className="flex items-center justify-center gap-2 rounded border border-emerald-500/50 bg-black px-4 py-2 text-xs font-mono font-bold text-emerald-400 hover:bg-emerald-500/10 transition-all shadow-sm shadow-emerald-500/5"
             >
               <Upload size={16} /> Import Leads via CSV
             </button>
@@ -327,71 +327,71 @@ export default function ImporterDashboard() {
 
           {/* Admin KPI Stats */}
           <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-3">
-            <div className={`rounded-xl border p-4 transition-colors ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+            <div className="rounded border p-4 border-zinc-900 bg-black">
               <p className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">Avg. AI Latency</p>
-              <h3 className="mt-1 text-xl font-extrabold text-cyan-400">2.51s</h3>
-              <p className="text-[10px] text-zinc-450 mt-1">For 200+ row datasets</p>
+              <h3 className="mt-1 text-xl font-extrabold text-emerald-400">&gt; 2.51s</h3>
+              <p className="text-[10px] text-zinc-600 mt-1">For 200+ row datasets</p>
             </div>
-            <div className={`rounded-xl border p-4 transition-colors ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+            <div className="rounded border p-4 border-zinc-900 bg-black">
               <p className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">AI Mapping Accuracy</p>
               <h3 className="mt-1 text-xl font-extrabold text-emerald-400">99.4%</h3>
-              <p className="text-[10px] text-zinc-450 mt-1">Based on recent 12 imports</p>
+              <p className="text-[10px] text-zinc-600 mt-1">Based on recent 12 imports</p>
             </div>
-            <div className="rounded-xl border p-4 border-zinc-800 bg-[#0f111a]">
+            <div className="rounded border p-4 border-zinc-900 bg-black">
               <p className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider">AI Cleaning Rules</p>
-              <h3 className="mt-1 text-xl font-extrabold text-cyan-400">4 Active</h3>
-              <p className="text-[10px] text-cyan-400 mt-1">Format, Split, Skip, Score</p>
+              <h3 className="mt-1 text-xl font-extrabold text-emerald-400">4 Active</h3>
+              <p className="text-[10px] text-emerald-400 mt-1">Format, Split, Skip, Score</p>
             </div>
           </div>
 
           {/* Connected Lead Channels */}
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Google Ads */}
-            <div className="rounded-xl border p-6 border-zinc-800 bg-[#0f111a]">
+            <div className="rounded border p-6 border-zinc-900 bg-black">
               <div className="flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                <div className="flex h-12 w-12 items-center justify-center rounded border border-zinc-900 bg-black text-emerald-400">
                   <TrendingUp size={24} />
                 </div>
-                <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">Active</span>
+                <span className="rounded border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">Active</span>
               </div>
-              <h3 className="mt-4 text-lg font-bold">Google Ads Export</h3>
-              <p className="mt-2 text-xs text-zinc-400">Sync lead data directly from your Google search campaigns.</p>
+              <h3 className="mt-4 text-lg font-bold text-zinc-100">Google Ads Export</h3>
+              <p className="mt-2 text-xs text-zinc-500">Sync lead data directly from your Google search campaigns.</p>
               <div className="mt-6 flex justify-end">
-                <button className="flex items-center gap-1 text-xs text-cyan-400 font-semibold hover:underline">
+                <button className="flex items-center gap-1 text-xs text-emerald-400 font-semibold hover:underline">
                   Configure <ChevronRight size={14} />
                 </button>
               </div>
             </div>
 
             {/* Facebook Ads */}
-            <div className={`rounded-xl border p-6 transition-all ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
+            <div className="rounded border p-6 border-zinc-900 bg-black">
               <div className="flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                <div className="flex h-12 w-12 items-center justify-center rounded border border-zinc-900 bg-black text-emerald-400">
                   <Users size={24} />
                 </div>
-                <span className="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">Active</span>
+                <span className="rounded border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">Active</span>
               </div>
-              <h3 className="mt-4 text-lg font-bold">Facebook Ads Lead Export</h3>
-              <p className="mt-2 text-xs text-zinc-400">Import leads generated from Facebook Lead Ads campaigns.</p>
+              <h3 className="mt-4 text-lg font-bold text-zinc-100">Facebook Ads Lead Export</h3>
+              <p className="mt-2 text-xs text-zinc-500">Import leads generated from Facebook Lead Ads campaigns.</p>
               <div className="mt-6 flex justify-end">
-                <button className="flex items-center gap-1 text-xs text-cyan-400 font-semibold hover:underline">
+                <button className="flex items-center gap-1 text-xs text-emerald-400 font-semibold hover:underline">
                   Configure <ChevronRight size={14} />
                 </button>
               </div>
             </div>
 
             {/* AI CSV Importer Channel */}
-            <div className="group rounded-xl border p-6 border-zinc-800 bg-[#0f111a] hover:border-cyan-500/50 cursor-pointer" onClick={() => setShowModal(true)}>
+            <div className="group rounded border p-6 border-zinc-900 bg-black hover:border-emerald-500/30 cursor-pointer" onClick={() => setShowModal(true)}>
               <div className="flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-tr from-cyan-500 to-emerald-400 text-zinc-950 shadow-md">
+                <div className="flex h-12 w-12 items-center justify-center rounded border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 shadow-md">
                   <FileSpreadsheet size={24} />
                 </div>
-                <span className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-2 py-0.5 text-xs text-cyan-400">AI Powered</span>
+                <span className="rounded border border-emerald-500/20 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-400">AI Powered</span>
               </div>
-              <h3 className="mt-4 text-lg font-bold group-hover:text-cyan-400 transition-colors">Import CSV File</h3>
-              <p className="mt-2 text-xs text-zinc-400">Upload raw sales files, Excel spreadsheets, or competitor exports. Our AI maps columns dynamically.</p>
+              <h3 className="mt-4 text-lg font-bold group-hover:text-emerald-400 transition-colors text-zinc-100">Import CSV File</h3>
+              <p className="mt-2 text-xs text-zinc-500">Upload raw sales files, Excel spreadsheets, or competitor exports. Our AI maps columns dynamically.</p>
               <div className="mt-6 flex justify-end">
-                <button className="flex items-center gap-1 text-xs text-cyan-400 font-semibold group-hover:underline">
+                <button className="flex items-center gap-1 text-xs text-emerald-400 font-semibold group-hover:underline">
                   Launch Importer <ArrowRight size={14} />
                 </button>
               </div>
@@ -400,60 +400,60 @@ export default function ImporterDashboard() {
 
           {/* AI Importer System Settings */}
           <div className="mt-10">
-            <h2 className="text-lg font-bold tracking-tight mb-2">AI Importer Configuration Settings</h2>
-            <p className="text-xs text-zinc-450 mb-4">Admin toggle controls to customize data cleaning algorithms and validation rules in real-time.</p>
+            <h2 className="text-lg font-bold tracking-tight mb-2 text-zinc-100">AI Importer Configuration Settings</h2>
+            <p className="text-xs text-zinc-500 mb-4">Admin toggle controls to customize data cleaning algorithms and validation rules in real-time.</p>
             
             <div className="grid gap-6 md:grid-cols-2">
               {/* Rules Toggles */}
-              <div className={`rounded-xl border p-6 ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
-                <h3 className="text-sm font-bold mb-4 text-zinc-300">Active Cleaning Directives</h3>
+              <div className="rounded border p-6 border-zinc-900 bg-black">
+                <h3 className="text-sm font-bold mb-4 text-emerald-400">Active Cleaning Directives</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs font-semibold text-zinc-300">Isolate Primary Contacts (Rule 5)</p>
                       <p className="text-[10px] text-zinc-550">Auto-splits multiple phone numbers & emails, moving secondary ones to crm_notes.</p>
                     </div>
-                    <span className="h-5 w-9 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-[10px] font-bold">ON</span>
+                    <span className="h-5 w-9 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-[10px] font-bold">ON</span>
                   </div>
-                  <div className="flex items-center justify-between border-t border-zinc-800/40 pt-4">
+                  <div className="flex items-center justify-between border-t border-zinc-900 pt-4">
                     <div>
                       <p className="text-xs font-semibold text-zinc-300">Auto-format Date Timestamps (Rule 3)</p>
                       <p className="text-[10px] text-zinc-550">Normalizes messy dates to standard JS Date format.</p>
                     </div>
-                    <span className="h-5 w-9 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-[10px] font-bold">ON</span>
+                    <span className="h-5 w-9 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-[10px] font-bold">ON</span>
                   </div>
-                  <div className="flex items-center justify-between border-t border-zinc-800/40 pt-4">
+                  <div className="flex items-center justify-between border-t border-zinc-900 pt-4">
                     <div>
                       <p className="text-xs font-semibold text-zinc-300">Predictive Quality Scoring (Relevancy)</p>
                       <p className="text-[10px] text-zinc-550">Calculates lead relevancy rating (HIGH/MEDIUM/LOW) using AI analysis.</p>
                     </div>
-                    <span className="h-5 w-9 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-[10px] font-bold">ON</span>
+                    <span className="h-5 w-9 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-[10px] font-bold">ON</span>
                   </div>
                 </div>
               </div>
 
               {/* Historical Audit Logs */}
-              <div className={`rounded-xl border p-6 ${darkMode ? "border-zinc-800 bg-[#0f111a]" : "border-zinc-200 bg-white"}`}>
-                <h3 className="text-sm font-bold mb-4 text-zinc-300">Recent Admin Import History</h3>
+              <div className="rounded border p-6 border-zinc-900 bg-black">
+                <h3 className="text-sm font-bold mb-4 text-emerald-400">Recent Admin Import History</h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs">
                     <div>
-                      <p className="font-semibold text-zinc-350">groweasy_sample_leads.csv</p>
-                      <p className="text-[9px] text-zinc-550">Today, 5:45 PM • 200 records • CRM Leads</p>
+                      <p className="font-semibold text-zinc-300">groweasy_sample_leads.csv</p>
+                      <p className="text-[9px] text-zinc-500">Today, 5:45 PM • 200 records • CRM Leads</p>
                     </div>
                     <span className="rounded bg-emerald-500/10 text-emerald-400 px-2 py-0.5 text-[10px] font-semibold border border-emerald-500/20">Success (2.5s)</span>
                   </div>
-                  <div className="flex items-center justify-between border-t border-zinc-800/40 pt-3 text-xs">
+                  <div className="flex items-center justify-between border-t border-zinc-900 pt-3 text-xs">
                     <div>
-                      <p className="font-semibold text-zinc-350">mock_inventory.csv</p>
-                      <p className="text-[9px] text-zinc-550">Today, 5:50 PM • 3 records • Product Inventory</p>
+                      <p className="font-semibold text-zinc-300">mock_inventory.csv</p>
+                      <p className="text-[9px] text-zinc-500">Today, 5:50 PM • 3 records • Product Inventory</p>
                     </div>
                     <span className="rounded bg-cyan-500/10 text-cyan-400 px-2 py-0.5 text-[10px] font-semibold border border-cyan-500/20">Analyzed (2.1s)</span>
                   </div>
-                  <div className="flex items-center justify-between border-t border-zinc-800/40 pt-3 text-xs">
+                  <div className="flex items-center justify-between border-t border-zinc-900 pt-3 text-xs">
                     <div>
-                      <p className="font-semibold text-zinc-350">facebook_raw_leads_june.csv</p>
-                      <p className="text-[9px] text-zinc-550">Yesterday, 1:22 PM • 42 records • CRM Leads</p>
+                      <p className="font-semibold text-zinc-300">facebook_raw_leads_june.csv</p>
+                      <p className="text-[9px] text-zinc-500">Yesterday, 1:22 PM • 42 records • CRM Leads</p>
                     </div>
                     <span className="rounded bg-emerald-500/10 text-emerald-400 px-2 py-0.5 text-[10px] font-semibold border border-emerald-500/20">Success (1.8s)</span>
                   </div>
