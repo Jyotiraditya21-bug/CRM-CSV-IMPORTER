@@ -88,7 +88,7 @@ If it is a general dataset (e.g. products, classes, transactions, inventories, f
       const userPrompt = `Headers: ${JSON.stringify(headers)}
 Sample rows (up to 3): ${JSON.stringify(sampleRows, null, 2)}`;
 
-      const response = await (openai.beta as any).chat.completions.parse({
+      const response = await openai.chat.completions.create({
         model: "gpt-4o-mini",
         messages: [
           { role: "system", content: systemPrompt },
@@ -98,11 +98,11 @@ Sample rows (up to 3): ${JSON.stringify(sampleRows, null, 2)}`;
         temperature: 0.1,
       });
 
-      const parsed = response.choices[0].message.parsed;
-      if (!parsed) {
-        throw new Error("Failed to parse dataset analysis from OpenAI");
+      const content = response.choices[0].message.content;
+      if (!content) {
+        throw new Error("Failed to parse dataset analysis from OpenAI: Empty response content");
       }
-
+      const parsed = JSON.parse(content) as DatasetAnalysis;
       return parsed;
     } catch (error: any) {
       if (attempt === maxRetries) {
